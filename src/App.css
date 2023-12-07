@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'futile';
+  src: local('futile'), url(./fonts/FutilePro.woff) format('woff');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Abaddon';
+  src: local('abaddon'), url(./fonts/Abaddon-Light.ttf) format('truetype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Abaddon Bold';
+  src: local('abaddonbold'), url(./fonts/Abaddon-Bold.ttf) format('truetype');
+  font-display: block;
+}
+
+body,
+html,
+#root,
+#map {
+  height: 100%;
+  width: 100%;
+  font-family: 'Abaddon';
+  font-size: 1rem;
+  color: #181425;
+}
+
+/*  keyframes */
+@keyframes dashanimation {
+  0% {
+    stroke-dashoffset: 100%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+@keyframes strokeanimation {
+  0% {
+    stroke: #6ac97b;
+  }
+  50% {
+    stroke: #fff;
+  }
+  100% {
+    stroke: #6ac97b;
+  }
+}
+
+.dest-line {
+  stroke: #6ac97b;
+  stroke-dasharray: 5px, 10px;
+  stroke-linecap: 50%;
+  stroke-width: 5px;
+
+  animation: dashanimation 30s linear infinite;
+  /*  animation: strokeanimation 4s linear infinite; */
+}
+
+.dest-line-attack {
+  stroke: #b4202a;
+  stroke-dasharray: 5px, 10px;
+  stroke-linecap: 50%;
+  stroke-width: 5px;
+
+  animation: dashanimation 30s linear infinite;
+  /*  animation: strokeanimation 4s linear infinite; */
+}
+
+.dest-line-blocked {
+  stroke: #999;
+  stroke-dasharray: 5px, 10px;
+  stroke-linecap: 50%;
+  stroke-width: 5px;
+
+  animation: dashanimation 30s linear infinite;
+  /*  animation: strokeanimation 4s linear infinite; */
+}
+
+button {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 1rem;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+* {
+  user-select: none;
+}
