@@ -1,11 +1,11 @@
-import React from 'react';
-import { useHistory } from 'react-router';
-import styled from 'styled-components';
-import { Box } from '../Box';
-import { Button } from '../Buttons';
-import { useRecoilPersist } from '../hooks';
-import { URLS } from '../Routes';
-import { WavyText } from '../WavyText';
+import React from "react";
+import { useHistory } from "react-router";
+import styled from "styled-components";
+import { Box } from "../Box";
+import { Button } from "../Buttons";
+import { URLS } from "../Routes";
+import { WavyText } from "../WavyText";
+import { useRecoilPersist } from "../hooks";
 
 const Wrapper = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.h1`
-  font-family: 'Futile';
+  font-family: "Futile";
   display: flex;
   color: #fff;
   letter-spacing: 2px;
@@ -37,7 +37,7 @@ export const StartScreen: React.FC = () => {
 
   return (
     <Wrapper>
-      <Logo src={require('../../Resources/logo.png').default} alt="logo" />
+      <Logo src={require("../../Resources/logo.png").default} alt="logo" />
       <Header>
         <WavyText text="MAP" />
         <Box marginLeft="0.5rem">
@@ -67,6 +67,23 @@ export const StartScreen: React.FC = () => {
           }}
         >
           Continue
+        </Button>
+      </Box>
+      <Box width="300px" marginTop="2rem">
+        <Button
+          bgColor="#000"
+          color="#FFF"
+          onClick={() => window.open("https://github.com/sappalele/maprpg")}
+        >
+          <Box
+            is="img"
+            width="1rem"
+            height="auto"
+            src={require("../../Resources/github-mark-white.png").default}
+            alt="github"
+            marginRight="1rem"
+          />
+          Github
         </Button>
       </Box>
     </Wrapper>
